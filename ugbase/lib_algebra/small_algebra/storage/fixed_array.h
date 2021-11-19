@@ -82,6 +82,9 @@ public:
 	inline bool
 	reserve(size_type newN) const;
 
+	inline void
+	set_zero();
+
 	// Element access
 	inline const T &
 	at(size_type i) const
@@ -178,6 +181,8 @@ public:
 		return nrRows == rowsT && nrCols == colsT;
 	}
 
+	inline void
+	set_zero();
 
 	// Element access
 	inline const T &

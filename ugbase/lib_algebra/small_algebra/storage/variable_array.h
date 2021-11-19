@@ -67,6 +67,7 @@ public:
 	VariableArray1();
 	VariableArray1(size_type n_);
 	VariableArray1(const VariableArray1<T> &other);
+	VariableArray1(const VariableArray1<T> &&other);
 
 //protected:
 	// see Alexandrescu: non-virtual destructors should be protected
@@ -85,6 +86,9 @@ public:
 
 	inline bool
 	reserve(size_type n) const;
+
+	inline void
+	set_zero();
 
 	// Element access
 
@@ -107,6 +111,10 @@ public:
 
 	inline T &
 	operator[](size_type i) ;
+
+	// copy and move operator necessary for non arightmetic T
+	VariableArray1<T>& operator=(const VariableArray1<T>& other);
+	VariableArray1<T>& operator=(VariableArray1<T>&& other);
 
 	// output
 
@@ -150,6 +158,7 @@ public:
 	VariableArray2();
 	VariableArray2(size_type rows_, size_type cols_);
 	VariableArray2(const VariableArray2<T, T_ordering> &other);
+	VariableArray2(VariableArray2<T, T_ordering> &&other);
 
 //protected:
 	// see Alexandrescu: non-virtual destructors should be protected
@@ -175,6 +184,9 @@ public:
 	inline void
 	reserve(size_type nrRows, size_type nrCols) const 	{ return; }
 
+	inline void
+	set_zero();
+
 	// Element Access
 
 	inline const T &
@@ -196,6 +208,10 @@ public:
 
 	inline T &
 	operator()(size_type r, size_type c) ;
+
+	// copy and move operators
+	VariableArray2<T, T_ordering>& operator=(const VariableArray2<T, T_ordering> &other);
+	VariableArray2<T, T_ordering>& operator=(VariableArray2<T, T_ordering> &&other);
 
 	// output
 

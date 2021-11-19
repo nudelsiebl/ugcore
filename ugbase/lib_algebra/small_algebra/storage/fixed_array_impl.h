@@ -92,6 +92,26 @@ FixedArray1<T, n>::reserve(size_t newN) const
 }
 
 
+template<typename T, size_t n>
+inline void
+FixedArray1<T, n>::set_zero() {
+	if constexpr(std::is_arithmetic<T>::value) {
+			for(std::size_t i=0; i<n; ++i)
+				values[i] = 0;
+	} else {
+		if constexpr(std::is_pointer<T>::value) {
+			for(std::size_t i=0; i<n; ++i)
+				values[i]->set_zero();
+			
+		}
+		else
+		{
+			for(std::size_t i=0; i<n; ++i)
+				values[i].set_zero();
+		}
+	}
+}
+
 // Element access
 template<typename T, size_t n>
 inline T &
@@ -176,6 +196,27 @@ FixedArray2<T, rowsT, colsT, T_ordering>::resize(size_t newRows, size_t newCols,
 }
 
 
+template<typename T, size_t rowsT, size_t colsT, eMatrixOrdering T_ordering>
+inline void
+FixedArray2<T, rowsT, colsT, T_ordering>::set_zero() {
+	if constexpr(std::is_arithmetic<T>::value) {
+			for(std::size_t i=0; i<rowsT*colsT; ++i)
+				values[i] = 0;
+	}
+	else
+	{
+		if constexpr(std::is_pointer<T>::value) {
+			for(std::size_t i=0; i<rowsT*colsT; ++i)
+				values[i]->set_zero();
+			
+		}
+		else
+		{
+			for(std::size_t i=0; i<rowsT*colsT; ++i)
+				values[i].set_zero();
+		}
+	}
+}
 
 // Element access
 
