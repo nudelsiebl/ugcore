@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL_TEST_LAYOUTS__
-#define __H__PCL_TEST_LAYOUTS__
+#ifndef __H__PCL__PCL_TEST_LAYOUTS__
+#define __H__PCL__PCL_TEST_LAYOUTS__
 
 #include <vector>
 #include <iomanip> // for 'std::setw()' etc.

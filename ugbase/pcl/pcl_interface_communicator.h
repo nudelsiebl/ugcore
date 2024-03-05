@@ -81,11 +81,11 @@ class InterfaceCommunicator
 	////////////////////////////////
 	//	SEND
 	
-	///	sends raw data to a target-proc.
-	/**	Shedules the data in pBuff to be sent to the target-proc
-	 *	pBuff can be reused or cleared directly after the call returns.
+	///	Sends raw data to a target-proc.
+	/**	Schedules the data in pBuff to be sent to the target-proc
+	 *	\p pBuff can be reused or cleared directly after the call returns.
 	 *
-	 *	Data sent with this method can be received using receive_raw.
+	 *	Data sent with this method can be received using \p receive_raw.
 	 *
 	 *	Please note that this method should only be used if custom data
 	 *	should be send in a block with data that is communicated through
@@ -93,6 +93,10 @@ class InterfaceCommunicator
 	 *	has to be performed.
 	 *	If you're only interested in sending raw data, you should take a
 	 *	look into pcl::ProcessCommunicator::send.
+	 *  \param [in] targetProc Process to send the data to.
+	 *  \param [in] pBuff Pointer to the data.
+	 *  \param [in] bufferSize Size of the data.
+	 *  \param [in] bSizeKnownAtTarget If the size of the data is known at the target (bool, default false).
 	 */
 		void send_raw(int targetProc, const void* pBuff, int bufferSize,
 					  bool bSizeKnownAtTarget = false);
@@ -102,7 +106,11 @@ class InterfaceCommunicator
 	 *	interface and the binary stream that is associated with the
 	 *	specified target process.
 	 *	Note that data will not be send until communicate has been called.
-	 *	\sa receive_data, exchange_data*/
+	 *  \param [in] targetProc Process to target.
+	 *  \param [in] interface Interface to be used.
+	 *  \param [in] commPol Communication policy to be used.
+	 *	\sa receive_data, exchange_data
+	 */
 		void send_data(int targetProc,
 					   const Interface& interface,
 					   ICommunicationPolicy<TLayout>& commPol);
@@ -112,7 +120,8 @@ class InterfaceCommunicator
 	 *	layout and the binary stream that is associated with the
 	 *	layouts target processes.
 	 *	Note that data will not be send until communicate has been called.
-	 *	\sa receive_data, exchange_data*/
+	 *	\sa receive_data, exchange_data
+	 */
 		void send_data(const Layout& layout,
 					   ICommunicationPolicy<TLayout>& commPol);
 

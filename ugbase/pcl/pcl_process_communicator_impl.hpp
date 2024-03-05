@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL__pcl_process_communicator_impl__
-#define __H__PCL__pcl_process_communicator_impl__
+#ifndef __H__PCL__PCL_PROCESS_COMMUNICATOR_IMPL__
+#define __H__PCL__PCL_PROCESS_COMMUNICATOR_IMPL__
 
 #include "common/util/vector_util.h"
 

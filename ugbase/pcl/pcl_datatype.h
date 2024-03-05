@@ -33,8 +33,8 @@
 #include <mpi.h>
 #include "common/types.h"
 #include "common/error.h"
-#ifndef __H__PCL__pcl_datatype__
-#define __H__PCL__pcl_datatype__
+#ifndef __H__PCL__PCL_DATATYPE__
+#define __H__PCL__PCL_DATATYPE__
 
 namespace pcl
 {

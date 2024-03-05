@@ -33,8 +33,8 @@
 #include <string>
 #include <sstream>
 
-#ifndef __H__PCL_TOSTRING_H__
-#define __H__PCL_TOSTRING_H__
+#ifndef __H__PCL__PCL_TOSTRING__
+#define __H__PCL__PCL_TOSTRING__
 
 
 namespace pcl{

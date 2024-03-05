@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL_UTIL__
-#define __H__PCL_UTIL__
+#ifndef __H__PCL__PCL_UTIL__
+#define __H__PCL__PCL_UTIL__
 
 #include <iostream>
 #include <vector>

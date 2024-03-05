@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL_reduce_traits
-#define __H__PCL_reduce_traits
+#ifndef __H__PCL__PCL_REDUCE_TRAITS__
+#define __H__PCL__PCL_REDUCE_TRAITS__
 
 #include <algorithm>
 

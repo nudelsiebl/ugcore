@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__pcl_multi_group_communicator
-#define __H__pcl_multi_group_communicator
+#ifndef __H__PCL__PCL_MULTI_GROUP_COMMUNICATOR__
+#define __H__PCL__PCL_MULTI_GROUP_COMMUNICATOR__
 
 #include <vector>
 #include "pcl_process_communicator.h"

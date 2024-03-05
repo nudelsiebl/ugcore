@@ -34,6 +34,9 @@
 #include "common/util/binary_buffer.h"
 #include "common/serialization.h"
 
+#ifndef __H__PCL__PCL_UTIL_IMPL__
+#define __H__PCL__PCL_UTIL_IMPL__
+
 namespace pcl {
 
 template <typename TKey, typename TValue, typename Compare>
@@ -90,3 +93,5 @@ void MinimalKeyValuePairAcrossAllProcs(TKey& keyInOut, TValue& valInOut, const C
 
 
 } // end of namespace pcl
+
+#endif

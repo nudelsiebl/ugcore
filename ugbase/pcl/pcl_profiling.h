@@ -36,8 +36,8 @@
  * only during code optimization, since it introduces a noticable overhead.
  */
 
-#ifndef __H__UG__pcl_profiling__
-#define __H__UG__pcl_profiling__
+#ifndef __H__PCL__PCL_PROFILING__
+#define __H__PCL__PCL_PROFILING__
 
 #ifdef PROFILE_PCL
 	#include "common/profiler/profiler.h"

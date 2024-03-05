@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL_METHODS__
-#define __H__PCL_METHODS__
+#ifndef __H__PCL__PCL_METHODS__
+#define __H__PCL__PCL_METHODS__
 
 #include <vector>
 #include <list>

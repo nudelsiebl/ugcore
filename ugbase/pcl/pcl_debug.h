@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL_DEBUG__
-#define __H__PCL_DEBUG__
+#ifndef __H__PCL__PCL_DEBUG__
+#define __H__PCL__PCL_DEBUG__
 
 #include <iostream>
 #include "pcl_base.h"

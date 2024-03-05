@@ -39,28 +39,48 @@ namespace pcl
 /// \addtogroup pcl
 /// \{
 
-/// call this method before 'Init' to avoid a call to MPI_Init.
-/** This method may be useful if you use this program together with another
+/// Call this method before 'Init' to avoid a call to MPI_Init.
+/** Call this method before 'Init' to avoid a call to MPI_Init.
+ * This method may be useful if you use this program together with another
  * program which calls MPI_Init.
- * \note This will also stop MPI_Finalize from being called.*/
+ * \note This will also stop MPI_Finalize from being called.
+ * */
 void DisableMPIInit ();
 
-///	call this method before any other pcl-operations.
+///	Call this method before any other pcl-operations.
+/** The parameters \p argcp and \p argvp will be used to call MPI_Init.
+ * 
+*/
 void Init(int *argcp, char ***argvp);
 
-///	call this method to abort all mpi processes
+///	Call this method to abort all mpi processes.
+/**
+ * \param [in] errorcode is currently not used.
+*/
 void Abort(int errorcode = 1);
 
-///	call this method right before quitting your application
+///	Call this method right before quitting your application.
+/**
+ * Call this method right before quitting your application.
+*/
 void Finalize();
 
-///	returns the number of processes
+///	Returns the current number of processes.
+/**
+ * \return MPI_Comm_Size.
+*/
 int NumProcs();
 
-///	returns the rank of the process
+///	Returns the rank of the current process.
+/**
+ * \return MPI_Comm_Rank of the current process.
+*/
 int ProcRank();
 
-/// sets error handler
+/// Sets error handler.
+/** Sets error handler
+ *  Note that Init might have set an error handler already. 
+*/
 void SetErrHandler();
 
 // end group pcl

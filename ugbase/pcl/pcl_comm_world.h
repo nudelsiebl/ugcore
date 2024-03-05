@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL_COMM_WORLD__
-#define __H__PCL_COMM_WORLD__
+#ifndef __H__PCL__PCL_COMM_WORLD__
+#define __H__PCL__PCL_COMM_WORLD__
 
 #include <mpi.h>
 

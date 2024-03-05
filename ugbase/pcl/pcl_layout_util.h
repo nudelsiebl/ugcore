@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef __H__PCL__pcl_layout_util__
-#define __H__PCL__pcl_layout_util__
+#ifndef __H__PCL__PCL_LAYOUT_UTIL__
+#define __H__PCL__PCL_LAYOUT_UTIL__
 
 #include <vector>
 #include "common/util/hash.h"

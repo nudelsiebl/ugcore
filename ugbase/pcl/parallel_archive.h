@@ -30,8 +30,8 @@
  * GNU Lesser General Public License for more details.
  */
 
-#ifndef PARALLEL_ARCHIVE_H_
-#define PARALLEL_ARCHIVE_H_
+#ifndef __H__PCL__PARALLEL_ARCHIVE__
+#define __H__PCL__PARALLEL_ARCHIVE__
 
 #include "pcl_process_communicator.h"
 #include "common/util/binary_stream.h"
